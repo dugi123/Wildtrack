@@ -1,0 +1,26 @@
+name: 🚀 Deploy to wildsafari.42web.io
+
+on:
+  workflow_dispatch: # Uncomment below to deploy on push instead
+  # push:
+  #   branches:
+  #     - main
+
+jobs:
+  deploy:
+    name: 🎉 Deploy to wildsafari.42web.io
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: 📂 Sync files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ftpupload.net # Change if using another host
+          username: ${{ if0_39563893 }}
+          password: ${{ htdeNDSYGv }}
+          server-dir: your_domain/htdocs/ # Replace with your correct path
+          retries: 3
+          retryDelay: 10
